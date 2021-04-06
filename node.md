@@ -86,7 +86,61 @@ const person = {
 module.exports.singlePerson = person;
 ```
 
-⌨️ (49:50​​) Mind Grenade 
+To import an entire file, it can be done by:
+
+```js
+require('./my-file');
+```
+
+## Built-in Modules
+
+- **OS**
+    For interacting with the operating system (return system data)
+
+    ```js
+    // Import of the OS Node Module
+    const os = require('os');
+
+    // It is also possible to extract just he feature that we want to use
+
+
+    // Info about current user
+    const user = os.userInfo();
+
+    console.log(user);
+
+    // Method returns the system uptime in seconds
+    console.log('The System Uptime is:' + os.uptime() / 3600 + ' hours');
+
+    const currentOS = {
+        name: os.type(),
+        release: os.release(),
+        totalMem: os.totalmem(),
+        freeMem: os.freemem(),
+    }
+    console.log(currentOS);
+    ```
+
+- **PATH**
+
+- **FS**
+    There are 2 ways to interact with the FileSystem module:
+    1. async, non blocking
+        ```js
+        const { readFile, writeFile } = require('fs');
+        ```
+    Doesn't block = S C A L A B L E
+    
+    2. sync, blocking  
+        ```js
+        const { readFileSync, writeFileSync } = require('fs');
+        ```
+    The problem with the sync is that if a lot of user uses the a sync function that 
+    takes a lot of time => the application get stucks.
+    
+- **HTTP**
+
+
 ⌨️ (53:47​​) Built-In Module Intro 
 ⌨️ (56:31​​) Os Module 
 ⌨️ (1:04:13​​) Path Module
