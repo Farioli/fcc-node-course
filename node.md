@@ -140,20 +140,61 @@ require('./my-file');
     
 - **HTTP**
 
+    This module is for setup a http server.
+    
+    ```js
+        const http = require('http');
 
-⌨️ (53:47​​) Built-In Module Intro 
-⌨️ (56:31​​) Os Module 
-⌨️ (1:04:13​​) Path Module
-⌨️ (1:10:06​​) Fs Module (Sync)
-⌨️ (1:18:28​​) Fs Module (Async)
+        // Creates a server
+        const server = http.createServer((request, response) => {
 
-⌨️ (1:27:32​​) Sync Vs Async
-⌨️ (1:34:29​​) Http Intro
-⌨️ (1:35:58​​) Http Module (Setup)
-⌨️ (1:40:53​​) Http Module (More Features)
-⌨️ (1:45:57​​) NPM Info
-⌨️ (1:50:19​​) NPM Command
-⌨️ (1:53:10​​) First Package
+            // console.log(request);
+
+            if(request.url === '/'){
+
+                // Shorhand to say write & end
+                response.end('Welcome to our home page');
+            }
+
+            if(request.url === '/about'){
+
+                response.end('About');
+            }
+
+            // Prepare the response
+            response.write('<h1>Ooops!</h1><p>We can\'t seem to find the page you are looking for </p> <a href="/">Back Home</a>');
+            response.end();
+        });
+
+        // Port where the server listen
+        server.listen(5000);
+    ```
+## NPM
+Is the package manager for Node. There are all kinds of packages for Node.
+Package (dependency or module) = folder with Javascript Code
+ACHTUNG: There isn't quality controll on the packages!!!
+
+Npm Commands:
+
+```sh
+    # Comes with node
+    > npm (global command)
+    > npm --version
+    # Local Dependencies - Use the module only in the current project
+    > npm i <packageName>
+
+    # Global Dependencies
+    > (sudo) npm install -g <packageName>
+```
+
+*package.json* - is the manifest file that store info about the project / package.
+In the package json will be listed all the dependencies.
+There are 3 ways to create it:
+1. Manualy (create package.json in the root of the project, create properties, etc)
+    - package name (The name refers by dfault of the project folder. If the app must be published, must be unique)
+2. Automatically: With *npm init* (step by step)
+3. Automatically: With *npm -y* (everything default)
+
 ⌨️ (2:02:52​​) Share Code
 ⌨️ (2:09:04​​) Nodemon
 ⌨️ (2:15:04​​) Uninstall
@@ -176,6 +217,7 @@ require('./my-file');
 ⌨️ (3:33:01​​) Streams - Additional Info
 ⌨️ (3:35:05​​) Streams - Http Example
 ⌨️ (3:40:29​​) End Of Node Tutorial Module
+
 ⌨️ (3:40:46​​) HTTP Request/Response Cycle
 ⌨️ (3:44:49​​) Http Messages
 ⌨️ (3:55:52​​) Starter Project Install
