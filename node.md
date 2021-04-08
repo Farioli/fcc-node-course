@@ -195,11 +195,53 @@ There are 3 ways to create it:
 2. Automatically: With *npm init* (step by step)
 3. Automatically: With *npm -y* (everything default)
 
-⌨️ (2:02:52​​) Share Code
-⌨️ (2:09:04​​) Nodemon
-⌨️ (2:15:04​​) Uninstall
-⌨️ (2:17:53​​) Global Install
-⌨️ (2:23:22​​) Package-Lock.Json
+*NOTE*: the /node_modules must be gitignored.
+
+*npm install* : install all the dependencies inside the package.json
+
+*npm uninstall packageName* : uninstall a package.
+
+*npx* is an executore of the command without installing the package in the system.
+
+*ncm* : node certified modules - allows to check potential substiute attack on downloaded modules.
+
+*Nodemon*
+Nodemon is a Node library to rerun the server on each code change.
+It should be installed as development dependency because is not used in production.
+
+To install a package in development: npm i module-name -D or --save-dev.
+
+In the _package.json_ is possible to define scripts.
+To start the node application with nodemon, declare the script:
+
+"dev" : nodemon app.js,
+
+To start this script, run: _npm run dev_
+
+Another module: https://github.com/standard/standard
+
+*package.lock* : list all the dependencies of also the dependencies of the module installed.
+
+Links: 
+https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/#:~:text=The%20package.,understanding%20and%20working%20with%20Node.&text=json%20is%20used%20as%20what,streamlined%2C%20modular%2C%20and%20efficient.
+
+*Semantic Versioning*
+- https://nodesource.com/blog/semver-a-primer/
+
+- https://semver.org/
+
+
+
+# EVENT LOOP, ASYNC PATTERNS, EVENTS EMITTER AND STREAMS
+
+## Event Loop
+
+## Async Patterns
+
+## Event Emitter
+
+# Strams
+
 ⌨️ (2:25:56​​) Important Topics Intro
 ⌨️ (2:27:38​​) Event Loop
 ⌨️ (2:30:47​​) Event Loop Slides

@@ -1,0 +1,25 @@
+{
+  "name": "fcc-node-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-intro.js",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start" : "node app.js",
+    "dev": "nodeman app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Farioli/fcc-node-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Farioli/fcc-node-course/issues"
+  },
+  "homepage": "https://github.com/Farioli/fcc-node-course#readme"
+}
