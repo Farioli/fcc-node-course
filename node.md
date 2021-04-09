@@ -236,6 +236,20 @@ https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm/#:~:te
 
 ## Event Loop
 
+The event loop is what allows Node.js to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded — 
+by *offloading* operations to the system kernel whenever possible.
+
+Resourses:
+- https://nodejs.dev/learn/the-nodejs-event-loop
+- https://www.youtube.com/watch?v=PNa9OMajw9w (Node)
+- https://www.youtube.com/watch?v=8aGhZQkoFbQ (Browser)
+
+Javascript is Synchronous and single threaded: execute one line at time.
+When we use "setTimeout" we offloading to the browser.
+
+The event Loop prevent the block of javascript on every request.
+Each request is recorded as callback.
+
 ## Async Patterns
 
 ## Event Emitter
